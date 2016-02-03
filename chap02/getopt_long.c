@@ -21,12 +21,12 @@ void print_usage(FILE *stream, int exit_code)
 /* Main program entry point.  ARGC contains number of argument list
    elements; ARGV is an array of pointers to them.  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     int next_option;
 
     /* A string listing valid short options letters. */
-    const char *const short_options = "ho:v";
+    const char * const short_options = "ho:v";
     /* An array describing valid long options. */
     const struct option long_options[] = {
         {"help",    0, NULL, 'h'},
@@ -46,14 +46,14 @@ int main(int argc, char* argv[])
     program_name = argv[0];
 
     do {
-        next_option = getopt_long (argc, argv, short_options,
+        next_option = getopt_long(argc, argv, short_options,
                                    long_options, NULL);
         switch (next_option)
             {
             case 'h':   /* -h or --help  */
                 /* User has requested usage information. Print it to standard
                    output, and exit with exit code zero (normal termination).  */
-                print_usage (stdout, 0);
+                print_usage(stdout, 0);
 
             case 'o':   /* -o or --output */
                 /* This option takes an argument, the name of the output file.  */
@@ -67,13 +67,13 @@ int main(int argc, char* argv[])
             case '?':   /* The user specified an invalid option.  */
                 /* Print usage information to standard error, and exit with exit
                    code one (indicating abnormal termination).  */
-                print_usage (stderr, 1);
+                print_usage(stderr, 1);
 
             case -1:    /* Done with options.  */
                 break;
 
             default:    /* Something else: unexpected.  */
-                abort ();
+                abort();
             }
     }
     while (next_option != -1);
@@ -84,7 +84,7 @@ int main(int argc, char* argv[])
     if (verbose) {
         int i;
         for (i = optind; i < argc; ++i)
-            printf ("Argument: %s\n", argv[i]);
+            printf("Argument: %s\n", argv[i]);
     }
 
     /* The main program goes here.  */
