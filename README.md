@@ -1,16 +1,61 @@
 # cprogram
+
 C Programming
-## 我的C编程
+
+# 我的C编程
+
 学习Linux高级编程一书。
-## 章节目录
-### chap01 - Getting Started
-### chap02 - Writing Good GNU/Linux Software
-### chap03 - Processes
-### chap04 - Threads
-### chap05 - Interprocess Communication
-### chap06 - Devices
-### chap07 - The /proc File System
-### chap08 - Linux System Calls
-### chap09 - Inline Assembly Code
-### chap10 - Security
-### chap11 - A Simple GNU/Linux Application
+
+# 章节目录
+
+## chap01 - Getting Started
+
+## chap02 - Writing Good GNU/Linux Software
+
+## chap03 - Processes
+
+## chap04 - Threads
+
+## chap05 - Interprocess Communication
+
+## chap06 - Devices
+
+## chap07 - The /proc File System
+
+## chap08 - Linux System Calls
+
+Most of these system calls are declared in <unistd.h>.
+
+### strace
+
+The strace command traces the execution of another program, listing
+any system calls the program makes and any signals it recevies.
+
+To watch the system calls and signals in a program, simply invoke
+strace, followed by the program and its command-line arguments. 
+
+### access
+
+Testing File Permissions.
+
+The access system call determines whether the calling process has
+access permission to a file. It can check any combination of read,
+write, and execute permission, and it can also check for a file’s
+existence.
+
+The access call takes two arguments.The first is the path to the file to check.The
+second is a bitwise or of R_OK, W_OK, and X_OK, corresponding to read, write, and execute
+permission.The return value is 0 if the process has all the specified permissions. If
+the file exists but the calling process does not have the specified permissions, access
+returns –1 and sets errno to EACCES (or EROFS, if write permission was requested for afile on a read-only file system).
+If the second argument is F_OK, a
+
+exists, the return value is 0; if not, the return value is –1 and
+errno is set to ENOENT. Note that errno may instead be set to EACCES
+if a directory in the file path is inaccessible.
+
+## chap09 - Inline Assembly
+
+## chap10 - Security
+
+## chap11 - A Simple GNU/Linux Application
