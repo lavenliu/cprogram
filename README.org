@@ -1,32 +1,28 @@
-# cprogram
+* cprogram
 
 C Programming
 
-# 我的C编程
+* 章节目录
 
-学习Linux高级编程一书。
+** chap01 - Getting Started
 
-# 章节目录
+** chap02 - Writing Good GNU/Linux Software
 
-## chap01 - Getting Started
+** chap03 - Processes
 
-## chap02 - Writing Good GNU/Linux Software
+** chap04 - Threads
 
-## chap03 - Processes
+** chap05 - Interprocess Communication
 
-## chap04 - Threads
+** chap06 - Devices
 
-## chap05 - Interprocess Communication
+** chap07 - The /proc File System
 
-## chap06 - Devices
-
-## chap07 - The /proc File System
-
-## chap08 - Linux System Calls
+** chap08 - Linux System Calls
 
 Most of these system calls are declared in <unistd.h>.
 
-### strace
+*** strace
 
 The strace command traces the execution of another program, listing
 any system calls the program makes and any signals it recevies.
@@ -34,7 +30,7 @@ any system calls the program makes and any signals it recevies.
 To watch the system calls and signals in a program, simply invoke
 strace, followed by the program and its command-line arguments. 
 
-### access
+*** access
 
 Testing File Permissions.
 
@@ -54,8 +50,8 @@ exists, the return value is 0; if not, the return value is –1 and
 errno is set to ENOENT. Note that errno may instead be set to EACCES
 if a directory in the file path is inaccessible.
 
-## chap09 - Inline Assembly
+** chap09 - Inline Assembly
 
-## chap10 - Security
+** chap10 - Security
 
-## chap11 - A Simple GNU/Linux Application
+** chap11 - A Simple GNU/Linux Application
